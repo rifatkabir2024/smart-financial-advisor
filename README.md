@@ -59,8 +59,9 @@ The interaction between Azure services is essential for the functionality of the
 
 ## Screenshots of Deployment
 ![Azure Portal Configuration](screenshots/azure_portal.png)
-![CLI Deployment](screenshots/cli_deployment.png)
-![VS Code Deployment](screenshots/vscode_deployment.png)
+![CLI Deployment](screenshots/azure_install_conda.png)
+<!-- ![CLI Deployment](screenshots/cli_deployment.png) -->
+<!-- ![VS Code Deployment](screenshots/vscode_deployment.png) -->
 
 ## Project Demo Video URL
 [Project Demo Video](https://yourvideolink.com)

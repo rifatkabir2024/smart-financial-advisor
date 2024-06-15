@@ -1,4 +1,4 @@
-# powershell
+powershell
 # Copy code
 # Variables
 $resourceGroup = "SmartFinAdvisorRG"

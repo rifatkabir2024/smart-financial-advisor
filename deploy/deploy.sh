@@ -1,6 +1,6 @@
-# bash
+bash
 # Copy code
-#!/bin/bash
+# !/bin/bash
 
 # Variables
 resourceGroup="SmartFinAdvisorRG"

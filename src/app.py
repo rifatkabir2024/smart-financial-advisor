@@ -2,7 +2,7 @@ import os
 from azure.iot.hub import IoTHubRegistryManager
 from azure.ai.personalizer import PersonalizerClient
 from azure.identity import DefaultAzureCredential
-from azure.mgmt.synapse import SynapseManagementClient
+from azure.synapse import SynapseManagementClient
 
 # Azure credentials and configuration
 subscription_id = os.getenv("AZURE_SUBSCRIPTION_ID")
@@ -21,14 +21,35 @@ personalizer_client = PersonalizerClient(endpoint=personalizer_endpoint, credent
 synapse_client = SynapseManagementClient(credential=DefaultAzureCredential(), subscription_id=subscription_id)
 
 def analyze_financial_data(user_data):
-    # Placeholder function to analyze financial data
-    # Implement your data analysis logic here
-    pass
+  
+    print("Analyzing financial data...")
+    # Add data analysis logic here
+    total_expenses = user_data["expenses"]
+    total_income = user_data["income"]
+    savings = user_data["savings"]
+
+    # Calculate the percentage of expenses to income
+    expense_percentage = (total_expenses / total_income) * 100
+
+    # Determine the financial health based on the expense percentage
+    if expense_percentage <= 50:
+        financial_health = "Good"
+    elif expense_percentage <= 75:
+        financial_health = "Average"
+    else:
+        financial_health = "Poor"
+
+    # Update the user_data dictionary with the financial health
+    user_data["financial_health"] = financial_health
+
+    # Return the updated user_data
+    return user_data
 
 def get_personalized_advice(user_data):
-    # Placeholder function to get personalized financial advice
-    # Implement your Personalizer logic here
-    pass
+    # Get personalized advice from the Personalizer service
+    response = personalizer_client.rank(user_data)
+    advice = response.reward_action_id
+    return advice
 
 def track_spending(device_id):
     # Placeholder function to track spending using IoT Hub
