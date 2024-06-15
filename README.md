@@ -63,7 +63,7 @@ The interaction between Azure services is essential for the functionality of the
 <!-- ![VS Code Deployment](screenshots/vscode_deployment.png) -->
 
 ## Project Demo Video URL
-[Project Demo Video](https://yourvideolink.com)
+[Project Demo Video](https://youtu.be/vFL-kRQBHj4)
 
 ## License
 [MIT License](LICENSE)
