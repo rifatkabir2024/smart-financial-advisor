@@ -52,9 +52,23 @@ def get_personalized_advice(user_data):
     return advice
 
 def track_spending(device_id):
-    # Placeholder function to track spending using IoT Hub
     # Implement your IoT Hub logic here
-    pass
+    # Example implementation:
+    print(f"Tracking spending for device: {device_id}")
+    # Add your IoT Hub logic here
+    # Example implementation:
+    telemetry_data = {
+        "device_id": device_id,
+        "temperature": 25.5,
+        "humidity": 60.2,
+        "pressure": 1013.25
+    }
+    
+    # Send telemetry data to IoT Hub
+    iot_registry_manager.send_device_to_cloud_message(device_id, str(telemetry_data))
+    
+    # Print confirmation message
+    print("Telemetry data sent to IoT Hub:", telemetry_data)
 
 def main():
     user_data = {
