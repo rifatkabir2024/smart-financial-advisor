@@ -1,5 +1,4 @@
-markdown
-Copy code
+
 # Smart Financial Advisor for Personalized Wealth Management
 
 ## Project Description
@@ -65,11 +64,6 @@ The interaction between Azure services is essential for the functionality of the
 
 ## Project Demo Video URL
 [Project Demo Video](https://yourvideolink.com)
-
-## Contributions
-- **Member 1:** Data analysis and Azure Synapse setup.
-- **Member 2:** IoT Hub integration and SQL Database configuration.
-- **Member 3:** AI Personalizer and Metrics Advisor implementation.
 
 ## License
 [MIT License](LICENSE)
