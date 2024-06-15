@@ -9,6 +9,14 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background: #0078d7;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 20px;
         }
         h1, h2, h3 {
             color: #333;
@@ -20,6 +28,10 @@
             margin-bottom: 40px;
             border-bottom: 1px solid #ccc;
             padding-bottom: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .section:last-child {
             border-bottom: none;
@@ -33,10 +45,46 @@
             border: 1px solid #ccc;
             box-shadow: 0 0 5px rgba(0,0,0,0.1);
         }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .input-group button {
+            background: #0078d7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .input-group button:hover {
+            background: #005bb5;
+        }
+        .advisor-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .advisor-icon img {
+            max-width: 100px;
+            height: auto;
+        }
     </style>
 </head>
 <body>
-    <h1>Smart Financial Advisor for Personalized Wealth Management</h1>
+    <div class="header">
+        <h1>Smart Financial Advisor for Personalized Wealth Management</h1>
+    </div>
 
     <div class="section">
         <h2>Project Description</h2>
@@ -92,16 +140,54 @@
     </div>
 
     <div class="section">
+        <div class="advisor-icon">
+            <img src="https://i.ibb.co/txnG2mK/images.png" alt="Smart Financial Advisor Icon">
+        </div>
+        <p>Visual representation of a smart financial advisor.</p>
+    </div>
+
+    <div class="section">
+        <h2>User Input for Financial Data</h2>
+        <div class="input-group">
+            <label for="income">Monthly Income ($):</label>
+            <input type="number" id="income" placeholder="Enter your income">
+        </div>
+        <div class="input-group">
+            <label for="rent">Monthly Rent ($):</label>
+            <input type="number" id="rent" placeholder="Enter your rent">
+        </div>
+        <div class="input-group">
+            <label for="food">Monthly Food ($):</label>
+            <input type="number" id="food" placeholder="Enter your food expenses">
+        </div>
+        <div class="input-group">
+            <label for="utilities">Monthly Utilities ($):</label>
+            <input type="number" id="utilities" placeholder="Enter your utilities expenses">
+        </div>
+        <div class="input-group">
+            <label for="transportation">Monthly Transportation ($):</label>
+            <input type="number" id="transportation" placeholder="Enter your transportation expenses">
+        </div>
+        <div class="input-group">
+            <label for="entertainment">Monthly Entertainment ($):</label>
+            <input type="number" id="entertainment" placeholder="Enter your entertainment expenses">
+        </div>
+        <div class="input-group">
+            <button onclick="updateCharts()">Update Charts</button>
+        </div>
+    </div>
+
+    <div class="section">
         <h2>Screenshots of Deployment</h2>
         <div class="img-container">
             <img src="screenshots/azure_portal.png" alt="Azure Portal Configuration">
             <p>Azure Portal Configuration</p>
         </div>
-		<div class="img-container">
+        <div class="img-container">
             <img src="screenshots/azure_install_conda.PNG" alt="Azure install conda">
             <p>Download and Install Azure in Python</p>
         </div>
-		<!---
+        <!---
         <div class="img-container">
             <img src="screenshots/cli_deployment.png" alt="CLI Deployment">
             <p>CLI Deployment</p>
@@ -110,20 +196,34 @@
             <img src="screenshots/vscode_deployment.png" alt="VS Code Deployment">
             <p>Visual Studio Code Deployment</p>
         </div>
-		--->
+        --->
     </div>
 
-    <div class="section">
-        <h2>Project Demo Video URL</h2>
-        <p>Watch the project demo video to see the application in action:</p>
-        <p><a href="https://yourvideolink.com" target="_blank">Project Demo Video</a></p>
-    </div>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Initial data
+        let incomeData = [5000, 5500, 6000, 6500, 7000, 7500];
+        let expensesData = [3000, 3200, 3300, 3400, 3500, 3600];
+        let expenseBreakdownData = [1200, 600, 300, 150, 200];
 
-    <div class="section">
-        <h2>License</h2>
-        <p>This project is licensed under the <a href="LICENSE" target="_blank">MIT License</a>.</p>
-    </div>
+        // Financial Overview Chart
+        const overviewCtx = document.getElementById('overviewChart').getContext('2d');
+        const overviewChart = new Chart(overviewCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Income',
+                    data: incomeData,
+                    borderColor: 'rgba(0, 123, 255, 1)',
+                    backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                    fill: true
+                }, {
+                    label: 'Expenses',
+                    data: expensesData,
+                    borderColor: 'rgba(220, 53, 69,
 
-</body>
-</html>
+
+
 
