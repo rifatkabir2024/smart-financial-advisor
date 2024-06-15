@@ -1,0 +1,6 @@
+sql
+Copy code
+azure-iot-hub
+azure-ai-personalizer
+azure-identity
+azure-mgmt-synapse
