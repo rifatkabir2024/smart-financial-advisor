@@ -1,5 +1,4 @@
-markdown
-Copy code
+
 # Smart Financial Advisor for Personalized Wealth Management
 
 ## Project Description
