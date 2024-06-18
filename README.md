@@ -59,6 +59,8 @@ The interaction between Azure services is essential for the functionality of the
 ## Screenshots of Deployment
 ![Azure Portal Configuration](screenshots/azure_portal.png)
 ![Azure Install Conda](https://github.com/rifatkabir2024/smart-financial-advisor/assets/172693733/a8aeacb2-3f09-4dec-847d-ed9fd685a815)
+<img width="1089" alt="Screenshot 2024-06-18 at 11 22 00 AM" src="https://github.com/rifatkabir2024/smart-financial-advisor/assets/172693733/b8d09a01-76e3-4ea7-b600-7ba60b9356b1">
+
 <!-- ![CLI Deployment](screenshots/cli_deployment.png) -->
 <!-- ![VS Code Deployment](screenshots/vscode_deployment.png) -->
 
